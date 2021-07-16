@@ -77,7 +77,7 @@ def login():
             json_userexist  = jsonify({"error": "user is not valid"})
             json_userexist.status_code = 404
 
-        return json_userexist
+        return render_template('index.html', user= details['email'] , pswd = details['password']  )
     
 
 
